@@ -1,0 +1,168 @@
+.new {
+    .new__content {
+        .new__tittle {
+            .nav-tabs {
+                border-bottom: none;
+                .nav-item {
+                    .nav-link {
+                        text-align: center;
+                        border: none;
+                        margin-bottom: 25px;
+                        margin: 0 auto;
+                        @include styleText($color-black-0, $fs-2, $fw-normal);
+                        line-height: 24px;
+                    }
+                    #DienAnh-tab {
+                        @include styleText($color-orange-0, $fs-3, $fw-normal);
+                    }
+                    &:hover #Review-tab {
+                        @include styleText($color-black-0, $fs-3, $fw-normal);
+                        transition: all 0.2s;
+                    }
+                    &:hover #KhuyenMai-tab {
+                        @include styleText($color-black-0, $fs-3, $fw-normal);
+                        transition: all 0.2s;
+                    }
+                }
+            }
+        }
+        .tab-content {
+            .new__items {
+                .col-news {
+                    width: 50%;
+                    padding: 0 8px;
+
+                    margin-bottom: 20px;
+                    .new__thumbnail {
+                        .new__Img {
+                            width: 100%;
+                            padding-bottom: 10px;
+                            height: 100%;
+                            border-radius: 4px;
+                            transition: all 0.2s;
+                        }
+                        .new__filmDetail {
+                            .new__filmTitle {
+                                // display: -webkit-box;
+                                // -webkit-line-clamp: 2;
+                                // -webkit-box-orient: vertical;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                line-height: 20px;
+                                height: 42px;
+                                font-size: 24px;
+                                transition: color 0.2s;
+                                margin-bottom: 5px;
+                                color: black !important;
+                            }
+
+                            &:hover {
+                                color: #fb4226 !important;
+                                text-decoration: none !important;
+                            }
+                        }
+                        .new__filmDescription {
+                            font-size: 13px;
+                            color: #4a4a4a;
+                            text-align: justify;
+                            padding: 0 5px 0 0;
+                            line-height: 19px;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            height: 55px;
+                            margin-bottom: 15px;
+                        }
+                        .new__Social {
+                            float: left;
+                            width: 20px;
+                            height: 25px;
+                            padding-left: 0;
+                            .new__Social-Like {
+                                display: inline;
+                                margin-right: 25px;
+
+                                cursor: pointer;
+                                .iconFacebook {
+                                    display: table-cell;
+                                    vertical-align: middle;
+                                    margin-right: 10px;
+                                    margin-top: 2px;
+                                    height: auto;
+                                    width: 18px;
+                                    transition: all 0.2s;
+                                }
+                                .new__AmountLike {
+                                    color: #bbb;
+                                    font-size: 12px;
+                                    line-height: 1;
+                                    display: table-cell;
+                                    vertical-align: middle;
+                                    pointer-events: none;
+                                    margin: 0 0 10px;
+                                    margin-block-start: 1em;
+                                    margin-block-end: 1em;
+                                    margin-inline-start: 0px;
+                                    margin-inline-end: 0px;
+                                    cursor: pointer;
+                                }
+                            }
+                            .new__Social-Comment {
+                                display: inline;
+                                list-style: none;
+                                margin-right: 25px;
+                                cursor: pointer;
+                                &:hover{
+                                    list-style: none;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                    .list-unstyled {
+                        .media {
+                            .media-Title {
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                line-height: 20px;
+
+                                height: 42px;
+                                font-size: 16px;
+                                transition: color 0.2s;
+                                margin-bottom: 5px;
+                                width: calc(100% - 70px);
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .new__content-showmore {
+        .btnViewMore {
+            font-size: 14px;
+            color: #949494;
+
+            border: 1px solid #949494;
+            border-radius: 4px;
+            text-align: center;
+            background: 0 0;
+            padding: 7px 25px;
+            transition: all 0.2s;
+            margin: auto;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            display: block;
+            &:hover {
+                background-color: #fb4226;
+                border-color: #fb4226;
+                color: #fff !important;
+            }
+        }
+    }
+}

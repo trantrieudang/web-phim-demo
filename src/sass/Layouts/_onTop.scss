@@ -1,0 +1,187 @@
+.filmList {
+     .filmList__content {
+          width: 70%;
+          margin: 0 auto;
+          padding-top: 50px;
+          .filmList__tittle {
+               .nav-tabs {
+                    border-bottom: none;
+                    .nav-item {
+                         .nav-link {
+                              text-align: center;
+                              border: none;
+                              margin-bottom: 25px;
+                              margin: 0 auto;
+                              @include styleText($color-black-0, $fs-2, $fw-normal);
+                              line-height: 24px;
+                              
+                         }
+                         .active{
+                              @include styleText($color-orange-0, $fs-3, $fw-normal);
+                              transition: all 0.2s;
+                         }
+                         .film__hover{
+                              &:hover{
+                                   @include styleText($color-orange-0, $fs-3, $fw-normal);
+                              transition: all 0.2s;
+                              }
+                         }
+                    }
+               }
+          }
+          .filmList__detail {
+               .filmList__items {
+                    .filmList_ItemsList {
+                         padding: 20px 10px 0;
+                         margin-bottom: 25px;
+                         cursor: pointer;
+                         .filmList__tag {
+                              .filmList_Link {
+                                   text-decoration: none;
+                                   color: #000;
+                                   cursor: pointer;
+                                   transition: all 0.2s;
+                                   .filmList__thumbnail {
+                                        border: none;
+                                        margin-bottom: 10px;
+                                        
+                                        position: relative;
+                                        border-radius: 4px;
+                                        padding-top: 147.90697674%;
+                                        background-position: center, 0 0;
+                                        background-size: 100% auto;
+                                        background-repeat: no-repeat, repeat-y;
+                                        .filmList__hoverInfo {
+                                             position: absolute;
+                                             width: 100%;
+                                             height: 100%;
+                                             background: linear-gradient(to top, #000, transparent 100%);
+                                             top: 0;
+                                             border-radius: 4px;
+                                             .filmList_playTrailer {
+                                                  width: 80px;
+                                                  height: 80px;
+                                                  position: absolute;
+                                                  top: 50%;
+                                                  left: 50%;
+                                                  transform: translate(-50%, -50%);
+                                                  z-index: 3;
+                                                  background: 0 0;
+                                                  border: none;
+                                             }
+                                        }
+                                        .filmList__point {
+                                             font-size: 16px;
+                                             background-color: rgba(12, 27, 54, 0.8);
+                                             border: 1px solid #1f2e46;
+                                             border-radius: 4px;
+                                             padding: 2px;
+                                             position: absolute;
+                                             top: 12px;
+                                             right: 12px;
+                                             color: #fff;
+                                             width: 54px;
+                                             text-align: center;
+                                             line-height: 1.1;
+                                             .txtFilmPoint {
+                                                  text-align: center;
+                                                  transform: scaleY(1.2);
+                                                  margin: 0 !important;
+                                             }
+                                             .txtFilmStar {
+                                                  margin: 0 !important;
+                                                  padding: 0 !important;
+
+                                                  img {
+                                                       display: inline-block;
+                                                       max-width: 8px;
+                                                       margin: 0 !important;
+                                                       text-align: center;
+                                                       padding: 0 !important;
+                                                       border: 0;
+                                                       vertical-align: middle;
+                                                       border-radius: 4px;
+                                                  }
+                                             }
+                                        }
+                                        
+                                   }
+                              }
+                              .filmList__info {
+                                   position: relative;
+                                   .filmList__name {
+                                        height: 42px;
+                                        max-height: 42px;
+                                        font-size: 16px;
+                                        color: #000;
+                                        line-height: 22px;
+                                        margin-bottom: 0;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 2;
+                                        -webkit-box-orient: vertical;
+
+                                        .txtFilmListClass {
+                                             font-weight: 700;
+                                             font-size: 14px;
+                                             background-color: #fb4226;
+                                             border-radius: 4px;
+                                             padding: 0 5px;
+                                             color: #fff;
+                                             min-width: 33px;
+                                             text-align: center;
+                                             display: inline-block;
+                                             margin-right: 8px;
+                                        }
+                                   }
+                                   .filmList__time {
+                                        font-size: 13px;
+                                        color: #4a4a4a;
+                                        margin-bottom: 15px;
+                                        margin-top: 8px;
+                                   }
+                                   .filmList__hoverBuy {
+                                        .filmList__hoverBuy-BTN {
+                                             position: absolute;
+                                             top: 0;
+                                             left: 0;
+                                             display: block;
+                                             width: 100%;
+                                             border-radius: 4px;
+                                             color: #fff;
+                                             font-size: 18px !important;
+                                             padding: 10px;
+                                             text-align: center;
+                                             background: linear-gradient(to left, #fb4226, #ce3017 100%);
+                                             border: none;
+                                        }
+                                   }
+                              }
+                              &:hover .filmList__hoverInfo {
+                                   visibility: visible;
+                                   opacity: 1;
+                                   transition: all 0.2s;
+                              }
+                              &:hover .filmList__hoverBuy {
+                                   visibility: visible;
+                                   opacity: 1;
+                                   transition: all 0.2s;
+                              }
+                              &:hover .filmList__name {
+                                   visibility: hidden;
+                                   opacity: 0;
+                                   transition: all 0.2s;
+                              }
+                              &:hover .filmList__time{
+                                   visibility: hidden;
+                                   opacity: 0;
+                                   transition: all 0.2s;
+                              }
+                         }
+                    }
+               }
+          }
+          
+     }
+}

@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html{
+  scroll-behavior: smooth; 
+  /* Tạo hiệu ứng chuyển động mượt khi nhấn thẻ navbar đến các elements trong cùng 1 trang */
+}

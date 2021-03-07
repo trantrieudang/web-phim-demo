@@ -1,0 +1,127 @@
+footer {
+     background-color: #222;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     color: #949494;
+     .maxWidth {
+         max-width: 1070px;
+         float: none;
+         margin: auto;
+         clear: both;
+         .topContain {
+             .tix {
+                 p {
+                     color: #fff;
+                     font-size: 80%;
+                 }
+                 a {
+                     font-size: 13px !important;
+                     font-size: 80%;
+                     font-weight: 700;
+                     white-space: nowrap;
+                     color: #949494;
+                     display: block;
+                     line-height: 0.3;
+                     text-decoration: none;
+                 }
+             }
+             .doiTac {
+                 p {
+                     color: #fff;
+                     font-size: 80%;
+                 }
+                 .row {
+                     
+                     
+                    
+                        margin-bottom: 15px;
+                        margin-left: 0;
+                     margin-right: 0;
+                        .icon {
+                            background-color: #fff;
+                            border-radius: 50%;
+                            height: 35px;
+                            width: 35px;
+                            margin-right: 17px;
+                        }
+                     
+                        
+                     
+                     
+                 }
+             }
+             .mediaApp {
+                 .mobileApp {
+                     text-align: center;
+                     p {
+                         color: #fff;
+                         font-size: 80%;
+                     }
+                     img {
+                         background: 0 0;
+                         height: 35px;
+                         width: auto;
+                         margin: 5px;
+                     }
+                 }
+                 .social {
+                     text-align: center;
+                     p {
+                         color: #fff;
+                         font-size: 80%;
+                     }
+                     img {
+                         background: 0 0;
+                         height: 35px;
+                         width: auto;
+                         margin: 5px;
+                     }
+                 }
+             }
+         }
+         hr {
+             border-top: 1px solid #4a4a4a;
+         }
+         .bottomContain {
+             .zion {
+                 margin-bottom: 20px;
+                 img {
+                     width: 80px;
+                     height: auto;
+                     border-radius: 8px;
+                 }
+             }
+             .col-sm-9 {
+                 margin-left: 20px;
+                 span {
+                     display: block;
+                     line-height: 1.8;
+                     color: #949494;
+                     font-size: 12px;
+                     font-weight: 400;
+                 }
+                 .tix_info {
+                     color: white;
+                 }
+             }
+             .bct {
+                 margin-bottom: 20px;
+                 img {
+                     width: 130px;
+                     float: right;
+                 }
+             }
+         }
+     }
+     @media only screen and (max-width: 1000px) {
+         .hideOnMobile {
+             display: none;
+         }
+         .col-sm-9 {
+             margin: 20px;
+             span {
+                 text-align: center;
+             }
+         }
+     }
+ }

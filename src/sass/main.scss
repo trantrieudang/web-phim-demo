@@ -1,0 +1,22 @@
+//Components
+@import './Components/slick';
+@import './Components/hover';
+@import './Components/active';
+
+//Helper
+@import './Helper/mixin';
+@import './Helper/variables';
+
+//Layout
+@import './Layouts/navHome';
+@import './Layouts/carousel';
+@import './Layouts/onTop';
+@import './Layouts/loader';
+@import './Layouts/searchBar';
+@import './Layouts/theaterGroup';
+@import './Layouts/news';
+@import './Layouts/appConn';
+@import './Layouts/footer';
+
+//Modal SCSS
+@import '../../node_modules/react-modal-video/scss/modal-video.scss';

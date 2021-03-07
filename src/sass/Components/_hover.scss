@@ -1,0 +1,10 @@
+.hideHover{
+     visibility: visible;
+     opacity: 1;
+     transition: all .2s;
+}
+.showHover{
+     visibility: hidden;
+     opacity: 0;
+     transition: all .2s;
+}

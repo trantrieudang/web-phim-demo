@@ -1,0 +1,36 @@
+.slick-dots{
+     bottom: 12%;
+     color: white;
+     li{
+          width: 20px;     
+          height: 20px;
+          margin-left: 4px;
+          button {
+               font-size: 20px;
+          }
+     }
+     
+}
+
+.slick-next{
+     width: 100px !important;
+     right: 40px !important;
+     
+}
+.slick-prev:before, .slick-next:before{
+     font-size: 60px !important;
+     color: #ff671f !important;
+}
+.slick-prev{
+     width: 100px !important;
+     left: 40px ;
+     z-index: 100 !important;
+     
+}
+.slick-dots li button:before{
+     font-size: 20px !important;
+     color: white;
+}
+.slick-dots  li.slick-active button:before{
+    color: #fb4226;
+}
