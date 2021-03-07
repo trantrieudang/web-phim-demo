@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import star from "../../../../../assets/images/star1.png";
 import star2 from "../../../../../assets/images/star1.2.png";
 import playIcon from "../../../../../assets/images/play-video.png";
