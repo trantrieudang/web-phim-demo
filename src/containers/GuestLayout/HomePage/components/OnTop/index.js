@@ -95,47 +95,48 @@ export default function OnTop() {
       return listMovie.data.map((item) => (
         <div className="filmList_ItemsList" key={item.maPhim}>
           <div className="filmList__tag">
-            <Link className="filmList_Link" to={`/movie/${item.maPhim}`}>
+            <div className="filmList_Link" >
               <div
                 className="filmList__thumbnail"
                 style={{ backgroundImage: `url(${item.hinhAnh})` }}
               >
-                <div className="filmList__hoverInfo showHover">
-                  <button
-                    className="filmList_playTrailer "
-                    onClick={() => {
-                      setOpen(true);
-                      setVideo(matchYoutubeUrl(item.trailer));
-                      
-                    }}
-                  >
-                    <img src={playIcon} alt={playIcon} />
-                  </button>
-                </div>
-                <span className="filmList__point">
-                  <p className="txtFilmPoint">{item.danhGia}</p>
-                  <p className="txtFilmStar">
-                    <img src={star} alt={star} />
-                    <img src={star} alt={star} />
-                    <img src={star} alt={star} />
-                    <img src={star} alt={star} />
-                    <img src={star2} alt={star2} />
-                  </p>
-                </span>
-                <div className="filmList__type"></div>
+                
+                        <span className="filmList__point">
+                          <p className="txtFilmPoint">{item.danhGia}</p>
+                          <p className="txtFilmStar">
+                            <img src={star} alt={star} />
+                            <img src={star} alt={star} />
+                            <img src={star} alt={star} />
+                            <img src={star} alt={star} />
+                            <img src={star2} alt={star2} />
+                          </p>
+                        </span>
+                        <div className="filmList__type"></div>
+                        <div className="filmList__hoverInfo showHover">
+                          <button
+                            className="filmList_playTrailer "
+                            onClick={() => {
+                              setOpen(true);
+                              setVideo(matchYoutubeUrl(item.trailer));
+                              
+                            }}
+                          >
+                            <img src={playIcon} alt={playIcon} />
+                          </button>
+                        </div>
               </div>
-            </Link>
+            </div>
             <div className="filmList__info">
               <div className="filmList__name hideHover">
                 <span className="txtFilmListClass">C18</span> {item.tenPhim}
               </div>
               <div className="filmList__time hideHover">100 phút</div>
               <div className="filmList__hoverBuy showHover">
-                <NavLink className="filmList_hoverBuyLink" to="#">
+                <Link className="filmList_hoverBuyLink" to={`/movie/${item.maPhim}`}>
                   <button className="filmList__hoverBuy-BTN btn btn-primary">
                     MUA VÉ
                   </button>
-                </NavLink>
+                </Link>
               </div>
             </div>
           </div>
