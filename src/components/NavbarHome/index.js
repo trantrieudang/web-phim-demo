@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import webLogo from "../../assets/images/web-logo-3.png";
+import webLogo from "../../assets/images/logo-web-phim.png";
 import avatarPic from "../../assets/images/avatar.png";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../containers/AuthLayout/userSlice";
@@ -24,7 +24,6 @@ export default function NavbarHome() {
             <img className="webLogo" src={webLogo} alt={webLogo} />
             <span className="webName">Banana Ticket</span>
           </Link>
-          
           <button
             className="navbar-toggler"
             type="button"
@@ -36,25 +35,26 @@ export default function NavbarHome() {
           >
             <span className="navbar-toggler-icon" />
           </button>
+          
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav">
               <li className="nav-item active">
-                <a className="nav-link" href="#filmList_Link">
+                <a className="nav-link" href="/#filmList_Link">
                   Lịch Chiếu
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#showTime_Link">
+                <a className="nav-link" href="/#showTime_Link">
                   Cụm Rạp
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#new_Link">
+                <a className="nav-link" href="/#new_Link">
                   Tin Tức
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#app_Link">
+                <a className="nav-link" href="/#app_Link">
                   Ứng dụng
                 </a>
               </li>
@@ -62,7 +62,7 @@ export default function NavbarHome() {
           </div>
 
           {!isLoggedIn && (
-            <div className="right">
+            <div className="right" >
               <div className="rightFirst">
                 <Link className="titleDisplay" to="/login">
                   <span className="titleLogin">Đăng nhập</span>
@@ -77,7 +77,7 @@ export default function NavbarHome() {
           )}
 
           {isLoggedIn && (
-            <div className="right">
+            <div className="right" >
               <div className="rightFirst">
                 <img className="imgAccount" src={avatarPic} alt={avatarPic} />
 

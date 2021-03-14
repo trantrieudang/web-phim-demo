@@ -6,6 +6,7 @@ import star2 from "../../../../../assets/images/star1.2.png";
 import playIcon from "../../../../../assets/images/play-video.png";
 import ModalVideo from "react-modal-video";
 import { actListMovieApi } from "./modules/action";
+
 import Loader from "../../../../../components/Loader";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 
@@ -46,10 +47,14 @@ function SamplePrevArrow(props) {
     />
   );
 }
+
+const randomInteger = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
 export default function OnTop() {
   const [isOpen, setOpen] = useState(false);
   const [video, setVideo] = useState("");
-  
 
   const listMovie = useSelector(
     (state) => ({
@@ -59,7 +64,7 @@ export default function OnTop() {
     shallowEqual
   );
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     dispatch(actListMovieApi());
   }, [dispatch]);
@@ -95,44 +100,48 @@ export default function OnTop() {
       return listMovie.data.map((item) => (
         <div className="filmList_ItemsList" key={item.maPhim}>
           <div className="filmList__tag">
-            <div className="filmList_Link" >
+            <div className="filmList_Link">
               <div
                 className="filmList__thumbnail"
                 style={{ backgroundImage: `url(${item.hinhAnh})` }}
               >
-                
-                        <span className="filmList__point">
-                          <p className="txtFilmPoint">{item.danhGia}</p>
-                          <p className="txtFilmStar">
-                            <img src={star} alt={star} />
-                            <img src={star} alt={star} />
-                            <img src={star} alt={star} />
-                            <img src={star} alt={star} />
-                            <img src={star2} alt={star2} />
-                          </p>
-                        </span>
-                        <div className="filmList__type"></div>
-                        <div className="filmList__hoverInfo showHover">
-                          <button
-                            className="filmList_playTrailer "
-                            onClick={() => {
-                              setOpen(true);
-                              setVideo(matchYoutubeUrl(item.trailer));
-                              
-                            }}
-                          >
-                            <img src={playIcon} alt={playIcon} />
-                          </button>
-                        </div>
+                <span className="filmList__point">
+                  <p className="txtFilmPoint">{item.danhGia}</p>
+                  <p className="txtFilmStar">
+                    <img src={star} alt={star} />
+                    <img src={star} alt={star} />
+                    <img src={star} alt={star} />
+                    <img src={star} alt={star} />
+                    <img src={star2} alt={star2} />
+                  </p>
+                </span>
+                <div className="filmList__type"></div>
+                <div className="filmList__hoverInfo showHover">
+                  <button
+                    className="filmList_playTrailer "
+                    onClick={() => {
+                      setOpen(true);
+                      setVideo(matchYoutubeUrl(item.trailer));
+                    }}
+                  >
+                    <img src={playIcon} alt={playIcon} />
+                  </button>
+                </div>
               </div>
             </div>
             <div className="filmList__info">
               <div className="filmList__name hideHover">
-                <span className="txtFilmListClass">C18</span> {item.tenPhim}
+                <span className="txtFilmListClass">
+                  C{randomInteger(13, 18)}
+                </span>{" "}
+                {item.tenPhim}
               </div>
               <div className="filmList__time hideHover">100 phút</div>
               <div className="filmList__hoverBuy showHover">
-                <Link className="filmList_hoverBuyLink" to={`/movie/${item.maPhim}`}>
+                <Link
+                  className="filmList_hoverBuyLink"
+                  to={`/movie/${item.maPhim}`}
+                >
                   <button className="filmList__hoverBuy-BTN btn btn-primary">
                     MUA VÉ
                   </button>
@@ -154,7 +163,6 @@ export default function OnTop() {
   if (loading) return <Loader />;
   return (
     <section className="filmList" id="filmList_Link">
-      
       <div className="filmList__content">
         <div className="col-xl-12 filmList__tittle">
           <ul

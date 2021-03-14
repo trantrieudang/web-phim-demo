@@ -4,6 +4,8 @@ import detailPageReducer from '../containers/GuestLayout/HomePage/components/Sea
 import theaterGroupReducer from '../containers/GuestLayout/HomePage/components/TheaterGroup/modules/reducer';
 import userReducer from '../containers/AuthLayout/userSlice';
 import movieDetailsReducer from '../containers/GuestLayout/HomePage/pages/MovieBookingDetail/modules/reducer';
+
+
 const rootReducer = combineReducers({
     listMovieReducer, detailPageReducer, theaterGroupReducer, userReducer, movieDetailsReducer
 });

@@ -1,5 +1,6 @@
 import HomePage from "../containers/GuestLayout/HomePage";
-import MovieBookingDetail from '../containers/GuestLayout/HomePage/pages/MovieBookingDetail';
+import MovieBookingDetail from "../containers/GuestLayout/HomePage/pages/MovieBookingDetail";
+
 
 
 const routesHome = [
@@ -13,6 +14,7 @@ const routesHome = [
     path: "/movie/:id",
     component: MovieBookingDetail,
   },
+ 
 ];
 
 const routesAdmin = [
